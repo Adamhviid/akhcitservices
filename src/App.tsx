@@ -1,121 +1,110 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <div id="page">
+      <header>
+        <div className="container">
+          <span className="logo">
+            AKHC <span className="logo-sub">IT Services</span>
+          </span>
+          <span className="cvr">CVR: 46 34 61 73</span>
         </div>
-        <div>
-          <h1>Get started</h1>
+      </header>
+
+      <main>
+        <section id="intro">
+          <div className="container">
+            <h1>
+              Webudvikling og
+              <br />
+              IT-rådgivning til virksomheder
+            </h1>
+            <p>
+              Jeg bygger og vedligeholder webløsninger til B2B-virksomheder —
+              fra skræddersyede PHP-applikationer til sikker,
+              vedligeholdelsesvenlig kode. Du arbejder direkte med mig, ikke med
+              et bureau.
+            </p>
+            <div className="tags">
+              <span className="tag">PHP</span>
+              <span className="tag">JavaScript</span>
+              <span className="tag">C#</span>
+              <span className="tag">MongoDB</span>
+              <span className="tag">MySQL</span>
+              <span className="tag">Webshops</span>
+              <span className="tag">B2B</span>
+              <span className="tag">Sikkerhed</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="ydelser">
+          <div className="container">
+            <h2>Hvad kan jeg hjælpe med?</h2>
+            <ul className="services">
+              <li>
+                <h3>Webudvikling og vedligeholdelse</h3>
+                <p>
+                  Skræddersyede webapplikationer og hjemmesider i PHP og MySQL.
+                  Jeg overtager gerne eksisterende projekter og sørger for, at
+                  de er stabile, sikre og nemme at arbejde med fremadrettet.
+                </p>
+              </li>
+              <li>
+                <h3>B2B-webløsninger</h3>
+                <p>
+                  Kontrolpaneler, produktkataloger, prislogik og kundeportaler
+                  til virksomheder der har brug for mere end en standard
+                  hjemmeside. Løsninger der passer til jeres
+                  forretningsprocesser.
+                </p>
+              </li>
+              <li>
+                <h3>Websikkerhed</h3>
+                <p>
+                  Gennemgang og sikring af eksisterende kode — herunder
+                  beskyttelse mod SQL-injection, korrekt håndtering af
+                  adgangskoder og opdatering af forældet kode til moderne
+                  standarder.
+                </p>
+              </li>
+              <li>
+                <h3>IT-rådgivning</h3>
+                <p>
+                  Usikker på hvilken løsning der passer til jeres behov? Jeg
+                  giver ærlig rådgivning baseret på praktisk erfaring fra både
+                  privat webudvikling og IT-arbejde i det offentlige.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="kontakt">
+          <div className="container">
+            <h2>Lad os tage en snak</h2>
+            <p>
+              Fortæl mig hvad du har brug for, så vender jeg tilbage inden for
+              et par dage.
+            </p>
+            <div className="contact-info">
+              <a href="mailto:hviidadam@gmail.com">hviidadam@gmail.com</a>
+              <a href="tel:+4531319100">+45 31 31 91 00</a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div className="container">
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            © {new Date().getFullYear()} AKHC IT Services — Adam Kanstrup Hviid
           </p>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;
